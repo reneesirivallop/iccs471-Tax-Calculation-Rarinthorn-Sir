@@ -6,9 +6,10 @@
 This project is for helping Thai citizens calculate their annual personal income tax based on their total yearly income and tax deductions.
 
 ## Requirements
-- R1: Calculate net income by subtracting personal deductions from the total annual income.
-- R2: Calculate the tax payable using a progressive Personal Income Tax (PIT) system (0-150k THB annual income pay 0% tax, 150k-300k THB annual income pay 5% tax, 300k-500k THB annual income pay 10% tax)
-- R3: Implement an important boundary rule: The maximum allowable standard personal deduction is capped at 100,000 THB, even if the user enters a higher number.
+## Requirements
+- R1: Calculate the standard expense deduction (50% of income, capped at 100,000 THB).
+- R2: Apply the full Thai progressive tax brackets (from 0% up to 35%) to the final net income.
+- R3: Implement complex boundary rules for allowances, such as the combined Life and Health Insurance cap (100,000 THB) and the percentage-based caps for Provident Funds.
 
 ## Setup and use
 - Prerequisites: Python 3.

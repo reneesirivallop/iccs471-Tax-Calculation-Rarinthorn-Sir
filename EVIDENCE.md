@@ -3,18 +3,14 @@
 > This file records what I checked, what actually happened, and why I accepted or changed the work. It does not repeat setup instructions or the implementation plan.
 
 ## Concrete checks
-Write the first two expectations before implementation. Fill in actual results after running them.
-
 | Check / requirement | Given | When | Expected result | Actual result / pass or fail |
 |---|---|---|---|---|
-| C1 / R... — normal case | [Concrete starting state/input.] | [Action.] | [Exact expected outcome.] | [Complete after checking.] |
-| C2 / R... — boundary or failure case | [Concrete starting state/input.] | [Action.] | [Exact expected outcome.] | [Complete after checking.] |
-
-[Add rows only as needed to cover R1–R3.]
+| C1 / R1, R2 — normal case | Income: 300,000 | Calculate tax | Deductions: 160k. Net: 140k. Tax is 0. | Actual result matched expected. Pass. |
+| C2 / R3 — boundary or failure case | Income: 500,000, Health Ins: 25,000, Life Ins: 90,000 | Calculate tax | Insurance capped at 100k. Net: 240k. Tax: 4,500. | Actual result matched expected. Pass. |
 
 ## Two review decisions
-- Plan decision: [What I accepted or changed, and why. One or two sentences.]
-- Code decision: [File/function/component, what I accepted or changed, and why. One or two sentences.]
+- Plan decision: I decided to expand the scope to cover the full Thai Revenue Department rules because a realistic calculator is much more useful.
+- Code decision: In `tax_calculator.py`, I grouped the allowances into dictionaries and used a combined cap for health and life insurance to keep the logic clean.
 
 ## Automated tests
 - Test file and behaviour checked: `test_tax_calculator.py` checking normal calculation and deduction boundary.
