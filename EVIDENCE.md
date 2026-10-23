@@ -17,8 +17,8 @@ Write the first two expectations before implementation. Fill in actual results a
 - Code decision: [File/function/component, what I accepted or changed, and why. One or two sentences.]
 
 ## Automated tests
-- Test file and behaviour checked: [...]
-- Command I ran: [...]
+- Test file and behaviour checked: `test_tax_calculator.py` checking normal calculation and deduction boundary.
+- Command I ran: `python -m unittest test_tax_calculator.py`
 - Final result: [Actual test count and outcome.]
 - Correction and rerun, if needed: [Brief account, or None needed.]
 
