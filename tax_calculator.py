@@ -7,10 +7,11 @@ def calculate_tax(income, deductions):
 
     # Step 3: Calculate progressive tax
     tax = 0
-    if net_income > 300000:
-        tax += (net_income - 300000) * 0.10
-        net_income = 300000
-    if net_income > 150000:
-        tax += (net_income - 150000) * 0.05
+    taxable_income = net_income
+    if taxable_income > 300000:
+        tax += (taxable_income - 300000) * 0.10
+        taxable_income = 300000
+    if taxable_income > 150000:
+        tax += (taxable_income - 150000) * 0.05
 
-    return tax
+    return net_income, tax
