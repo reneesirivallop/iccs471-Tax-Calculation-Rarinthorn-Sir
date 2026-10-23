@@ -10,4 +10,4 @@
 5. Add a simple command-line interface (CLI) at the bottom of `tax_calculator.py` to ask the user for inputs and print the tax.
 
 ## Later changes, if any
-[Briefly state any change to the agreed plan and why, or None.]
+Change initial plan from a basic calculator with 3 simple rules to a comprehensive calculator implementing all major Thai Revenue Department tax deductions. This required changing the data structure to use a dataclass for the inputs and outputs, and rewriting the automated tests.
